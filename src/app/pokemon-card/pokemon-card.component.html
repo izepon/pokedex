@@ -1,24 +1,18 @@
-  <div class="pokemon-card" *ngIf="pokemon">
-
-    <div class="pokemon-card-image">
-
-      <img
-      [src]="getPokemonImage(pokemon)" class="pokemon-card-img" alt="Pokemon Image">
-
-    </div>
-
-      <div class="pokemon-info">
-        <div class="number">Nº {{getPokemonNumber(pokemon)}}</div>
-        <div class="name">{{pokemon.name}}</div>
-
-        <div class="pokemon-types">
-          <div class="type" *ngFor="let type of pokemon.types"
-          [class]=" 'pokemon type ' + type.toLowerCase()" >
-            {{ type }}</div>
-
-        </div>
-      </div>
+<div class="pokemon-card" *ngIf="pokemon">
+  <div class="catch-number">
+    <div class="number">Nº {{getPokemonNumber(pokemon)}}</div>
+    <p><button [ngClass]="checkCatch(pokemon.number)?'btn btn-danger':'btn btn-light'"
+      (click)="catchPokemon(pokemon.number)">{{checkCatch(pokemon.number) ? 'Capturado':'Capturar'}}</button></p>
   </div>
+  <div class="pokemon-card-image">
+    <img [src]="getPokemonImage(pokemon)" class="pokemon-card-img" alt="Pokemon Image">
+  </div>
+  <div class="pokemon-info">
+    <div class="name">{{pokemon.name}}</div>
 
-
-
+    <div class="pokemon-types">
+      <div class="type" *ngFor="let type of pokemon.types" [class]=" 'pokemon type ' + type.toLowerCase()">
+        {{ type }}</div>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,23 @@
   border-radius: 10px;
 }
 
+.catch-number {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-danger{
+  border-radius: 100px;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.3);
+  font-weight: bold;
+}
+
+.btn-light {
+  border-radius: 100px;
+  box-shadow: 0 0 0 0.2rem rgba(24, 27, 31, 0.3);
+  font-weight: bold;
+}
+
 .pokemon-info .name .number {
   padding: 0 10px;
 }
@@ -25,9 +42,10 @@
 
 .pokemon-info .name {
   color: #313131;
-  text-transform: none;
+  text-transform: capitalize;
   font-size: 145%;
   margin: 0.5em 0 5px;
+
 }
 
 .pokemon-info .pokemon-types{
@@ -44,11 +62,7 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
-}
-
-
-.pokemon-types {
-
+  text-transform: capitalize;
 }
 
 .bug {

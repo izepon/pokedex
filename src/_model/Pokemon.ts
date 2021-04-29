@@ -1,6 +1,5 @@
 import { Type } from "./Type";
 
-
 export interface Pokemon {
   image: string;
   number: number;
@@ -25,3 +24,21 @@ function leadingZero(str: string | number, size = 3): string {
 
   return s;
 }
+
+export function catchPokemon(this: import("../app/pokemon-card/pokemon-card.component").PokemonCardComponent, id: any) {
+  if (this.checkCatch(id)) {
+    localStorage.removeItem(id);
+  } else {
+    localStorage.setItem(id, "true");
+  }
+}
+
+export function checkCatch(id: any)  {
+  if (localStorage.getItem(id) == 'true') {
+    return true;
+  }
+  return false;
+}
+
+
+

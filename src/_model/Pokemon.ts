@@ -33,7 +33,7 @@ export function catchPokemon(this: import("../app/pokemon-card/pokemon-card.comp
   }
 }
 
-export function checkCatch(id: any)  {
+export function checkCatch(id: any) {
   if (localStorage.getItem(id) == 'true') {
     return true;
   }

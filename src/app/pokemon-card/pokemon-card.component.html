@@ -2,7 +2,7 @@
   <div class="catch-number">
     <div class="number">Nº {{getPokemonNumber(pokemon)}}</div>
     <p><button [ngClass]="checkCatch(pokemon.number)?'btn btn-danger':'btn btn-light'"
-      (click)="catchPokemon(pokemon.number)">{{checkCatch(pokemon.number) ? 'Capturado':'Capturar'}}</button></p>
+        (click)="catchPokemon(pokemon.number)">{{checkCatch(pokemon.number) ? 'Capturado':'Capturar'}}</button></p>
   </div>
   <div class="pokemon-card-image">
     <img [src]="getPokemonImage(pokemon)" class="pokemon-card-img" alt="Pokemon Image">

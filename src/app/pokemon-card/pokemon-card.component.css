@@ -30,10 +30,6 @@
   margin: 0.5em 0 5px;
 }
 
-.pokemon-types {
-
-}
-
 .pokemon-info .pokemon-types{
   display: flex;
 }
@@ -50,6 +46,10 @@
   text-align: center;
 }
 
+
+.pokemon-types {
+
+}
 
 .bug {
 	background: -webkit-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);

@@ -1,14 +1,14 @@
-  <div class="pokemon-card">
+  <div class="pokemon-card" *ngIf="pokemon">
 
     <div class="pokemon-card-image">
 
       <img
-      [src]="pokemon.image" class="pokemon-card-img" alt="Pokemon Image">
+      [src]="getPokemonImage(pokemon)" class="pokemon-card-img" alt="Pokemon Image">
 
     </div>
 
       <div class="pokemon-info">
-        <div class="number">Nº {{pokemon.number}}</div>
+        <div class="number">Nº {{getPokemonNumber(pokemon)}}</div>
         <div class="name">{{pokemon.name}}</div>
 
         <div class="pokemon-types">
